@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><div class="hearts" id="hearts"></div>
+
+<!-- الصفحة الأولى -->
+<section class="screen active" id="quiz">
+    <div class="card">
+        <h1>إنتي إيه بالنسبة لمروان؟ 💗</h1>
+        <p>ركزي كده قبل ما تختاري يا بسبوستي 🌚</p>
+
+        <div class="buttons">
+            <button onclick="wrongAnswer()">حبيبة مروان ❤️</button>
+            <button onclick="wrongAnswer()">بسبوسة 🐼</button>
+            <button onclick="wrongAnswer()">عيون مروان 👀</button>
+            <button class="correct" onclick="showLetter()">جميع ما سبق 💗</button>
+        </div>
+
+        <p id="feedback"></p>
+    </div>
+</section>
+
+<!-- الصفحة الثانية -->
+<section class="screen" id="letter">
+    <div class="card letter-card">
+        <h1>كل سنة وانتي طيبة يا حبيبتي 🎂❤️</h1>
+
+        <div class="message">
+
+كل سنة وانتي طيبة يا توأم روحي النهاردة عيد ميلادك انتي والنهاردة اليوم اللى ربنا نزلى الهدية بتاعتي فيه انتي مش مجرد بنت حبيتها انتي بالنسبة لى عاملة زى الضل بتاعي مخلياني عايش كل لحظة ايا كان حلوة أو وحشة بس ببقى عارف انك معايا وده كفاية أنى احب حياتي وأحمد ربنا عليها♥️
+
+كل سنة وانتي حبيبتي كل سنة وانتي مزتي🌚
+
+أنا عارف وحاسس بيكي الفترة دى بس اوعدك أن أنا هاجي وهفرحك قريب اوى والله وهطلب ايدك من عيلتك وكل الدنيا هتبقى عارفة انك بتاعتي وان أنا الواد بتاعك حبيبك 🥰♥️
+
+بحبك وهفضل احبك يا سر سعادتي وربنا يقدرني وافرحك باقى عمرنا اللى هيبدا مجرد م نقفل باب بيتنا علينا ونعيش حياة كلها لعب وحب ودلع يا دلوعتي انتي
+
+بحبك يا بسبوستى
+🦆🦆🦆🦆
+</div>
+
+        <button class="correct next-button" onclick="showVideo()">
+            لسه فيه حاجة مستخبية ليكي.. دوسي هنا يا بسبوستي 🦆❤️
+        </button>
+    </div>
+</section>
+
+<!-- الصفحة الثالثة -->
+<section class="screen" id="videoScreen">
+    <div class="card">
+        <h1>بحبك❤️</h1>
+        <p>كل سنة وانتي أجمل حاجة في حياتي 🥰</p>
+
+        <video id="birthdayVideo" controls playsinline>
+            <source src="video.mp4" type="video/mp4">
+            المتصفح لا يدعم تشغيل الفيديو.
+        </video>
+
+        <p class="small">بحبك يا بسبوستي ❤️🦆</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

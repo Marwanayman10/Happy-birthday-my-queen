@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: 'Cairo', sans-serif;
+background: linear-gradient(135deg, #ffe5f0, #ffc6dd, #fff0f6);
+min-height: 100vh;
+color: #743c58;
+overflow-x: hidden;
+}
+
+.screen {
+display: none;
+min-height: 100vh;
+justify-content: center;
+align-items: center;
+padding: 20px;
+position: relative;
+z-index: 2;
+}
+
+.screen.active {
+display: flex;
+}
+
+.card {
+width: 100%;
+max-width: 650px;
+padding: 35px 25px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: 25px;
+text-align: center;
+box-shadow: 0 10px 35px rgba(180, 70, 120, 0.18);
+animation: appear 0.7s ease;
+}
+
+@keyframes appear {
+from {
+opacity: 0;
+transform: translateY(25px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+h1 {
+color: #d64f87;
+font-size: 27px;
+margin-bottom: 15px;
+}
+
+p {
+margin-bottom: 20px;
+}
+
+.buttons {
+display: flex;
+flex-direction: column;
+gap: 13px;
+margin-top: 25px;
+}
+
+button {
+border: none;
+padding: 14px;
+border-radius: 15px;
+background: #ffe0ed;
+color: #a33f6d;
+font-family: inherit;
+font-size: 17px;
+font-weight: 700;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+transform: translateY(-3px);
+background: #ffc8df;
+}
+
+.correct {
+background: linear-gradient(135deg, #e85d96, #c9437d);
+color: white;
+}
+
+.correct:hover {
+background: #c9437d;
+}
+
+#feedback {
+color: #d64f87;
+font-weight: bold;
+margin-top: 18px;
+min-height: 25px;
+}
+
+.letter-card {
+max-width: 750px;
+}
+
+.message {
+text-align: right;
+white-space: pre-line;
+line-height: 2.1;
+font-size: 16px;
+margin: 20px 0;
+}
+
+.next-button {
+width: 100%;
+margin-top: 15px;
+}
+
+video {
+width: 100%;
+max-height: 65vh;
+border-radius: 15px;
+margin-top: 15px;
+background: #222;
+}
+
+.small {
+margin-top: 20px;
+color: #d64f87;
+font-weight: bold;
+}
+
+/* القلوب المتحركة */
+
+.hearts {
+position: fixed;
+inset: 0;
+overflow: hidden;
+pointer-events: none;
+z-index: 1;
+}
+
+.heart {
+position: absolute;
+bottom: -40px;
+animation: float 10s linear infinite;
+opacity: 0.7;
+}
+
+@keyframes float {
+0% {
+transform: translateY(0) rotate(0);
+opacity: 0.8;
+}
+
+100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+}
+
+}
+
+/* الموبايل */
+
+@media (max-width: 600px) {
+.card {
+padding: 25px 18px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+.message {
+    font-size: 14px;
+    line-height: 2;
+}
+
+button {
+    font-size: 15px;
+}
+
+}
